@@ -50,7 +50,7 @@ class BHMessenger {
       throw new Error('Missing protocol and version number in encoded string');
     }
     // Parse and return data from string
-    let [, data] = str.split(this.protocol + '://' + this.version + '/');
+    const [, data] = str.split(this.protocol + '://' + this.version + '/');
     return JSON.parse(data);
   }
 }
@@ -60,6 +60,6 @@ function add(a, b) {
 }
 
 module.exports = {
-    BHMessenger,
-    add
-}
+  BHMessenger,
+  add,
+};

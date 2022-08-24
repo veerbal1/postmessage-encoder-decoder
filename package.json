@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/veerbal1/postmessage-encoder-decoder#readme",
   "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-google": "^0.14.0",
     "jest": "^28.1.3",
     "typescript": "^4.7.4"
   }

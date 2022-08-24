@@ -37,7 +37,7 @@ class BHMessenger {
       throw new Error('Parameter must be a string');
     }
 
-    const regex = new RegExp('^hapag-lloyd://v[0-9]/\\{.*\\}$');
+    const regex = new RegExp('hapag-lloyd://v[0-9]/\\{.*\\}$');
     if (!regex.test(str)) {
       throw new Error('Invalid encoded string');
     } else {

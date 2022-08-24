@@ -29,7 +29,7 @@ describe('BHMessenger v1: Encoder', () => {
 });
 
 describe('BHMessenger v2: Encoder', () => {
-  let obj = new BHMessenger({
+  const obj = new BHMessenger({
     version: 'v2',
   });
   it('should return a protocol as hapag-lloyd', () => {
@@ -72,7 +72,9 @@ describe('BHMessenger v1: Decoder', () => {
     );
   });
   it('should throw an error if version is not valid', () => {
-    expect(() => obj.decode('hapag-lloyd://v3/{}')).toThrow('Unsupported version');
+    expect(() => obj.decode('hapag-lloyd://v3/{}')).toThrow(
+      'Unsupported version'
+    );
   }),
     it('should return correct decoded object', () => {
       expect(obj.decode('hapag-lloyd://v1/{}')).toEqual({});
@@ -103,7 +105,9 @@ describe('BHMessenger v2: Decoder', () => {
     );
   });
   it('should throw an error if version is not valid', () => {
-    expect(() => obj.decode('hapag-lloyd://v3/{}')).toThrow('Unsupported version');
+    expect(() => obj.decode('hapag-lloyd://v3/{}')).toThrow(
+      'Unsupported version'
+    );
   }),
     it('should return correct decoded object', () => {
       expect(obj.decode('hapag-lloyd://v2/{}')).toEqual({});
